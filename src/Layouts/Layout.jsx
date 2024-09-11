@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Pizzalogo from '../assets/Images/pizza1.png';
 import Footer from '../Components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { logout } from '../Redux/Slices/AuthSlice';
 
 function Layout({ children }) {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   async function handleLogout(e) {
     e.preventDefault();
