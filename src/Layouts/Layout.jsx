@@ -35,7 +35,7 @@ useEffect(()=>{
     fetchCartDetails();
   }
 },[]);
-
+ 
   return (
     <div> 
       <nav className="flex items-center justify-around h-16 text-[#6B7280] font-mono border-none shadow-md">

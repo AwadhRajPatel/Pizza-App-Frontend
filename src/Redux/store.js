@@ -8,7 +8,7 @@ export const store = configureStore({
         auth: AuthSliceReducer,
         product:ProductSliceReducer,
         cart:CartSliceReducer,
-        order: OrderSliceReducer
+        order: OrderSliceReducer,
     },
     devTools:true,
     middleware: getDefaultMiddleware =>
