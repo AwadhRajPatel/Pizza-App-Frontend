@@ -17,10 +17,23 @@ function Layout({ children }) {
   async function handleLogout(e) {
     e.preventDefault();
     dispatch(logout());
-    
+  
+  }
+
+  async function fetchCartDetails() {
+    const res = await dispatch(getCartDetails());
+    console.log("cart details", res)
+    if(res?.payload?.isUnauthorized) {
+        console.log("unauthorized");
+        dispatch(logout());
+    }
 }
+
 useEffect(()=>{
-  dispatch(getCartDetails);
+  console.log(typeof(isLoggedIn))
+  if(isLoggedIn){
+    fetchCartDetails();
+  }
 },[]);
 
   return (

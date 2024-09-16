@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Layout from "../../Layouts/Layout";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import toast from "react-hot-toast";
 import { placeOrder } from "../../Redux/Slices/orderSlice";
 
@@ -16,7 +16,7 @@ function Order(){
         address: ''
     });
 
-    function handleUserInput(){
+    function handleUserInput(e){
         const {name, value} = e.target;
         setDetails({
          ...details,
@@ -42,10 +42,6 @@ function Order(){
         }
 
     }
-
-    useEffect(() =>{
-        console.log(cartsData);
-    });
 
     return(
         <Layout>
