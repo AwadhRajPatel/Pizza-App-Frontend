@@ -3,7 +3,7 @@ import Layout from "../../Layouts/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import {useState } from "react";
 import toast from "react-hot-toast";
-import { placeOrder } from "../../Redux/Slices/orderSlice";
+import { placeOrder } from "../../Redux/Slices/OrderSlice";
 
 function Order(){
 
